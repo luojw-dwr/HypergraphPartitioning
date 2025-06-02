@@ -87,7 +87,7 @@ function build_metis_graph(tree::SimpleWeightedGraph,
     println(f, SimpleWeightedGraphs.nv(tree), " ", SimpleWeightedGraphs.ne(tree), " 001")
 
     for i in 1:SimpleWeightedGraphs.nv(tree)
-        nbrs = SimpleWeightedGraphs.neighbors(tree, i)
+        nbrs = SimpleWeightedGraphs.Graphs.neighbors(tree, i)
         for j in eachindex(nbrs)
             nbr_vtx = nbrs[j]
             wt = Int(wts[i, nbr_vtx])

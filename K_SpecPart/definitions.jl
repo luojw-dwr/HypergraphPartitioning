@@ -172,11 +172,11 @@ end
 
 # Update these paths based on your configuration
 
-source_dir = "/home/fetzfs_projects/SpecPart/K_SpecPart"
-metis_path = "/home/fetzfs_projects/SpecPart/K_SpecPart"
-hmetis_path = "/home/fetzfs_projects/SpecPart/K_SpecPart/hmetis "
+source_dir = "K_SpecPart/"
+metis_path = "K_SpecPart/"
+hmetis_path = "SpecPart/hmetis "
 
 # use your OR-Tools / CPLEX exe here
 
-ilp_path = "/home/fetzfs_projects/SpecPart/K_SpecPart/ilp_partitioner/build/ilp_part " 
+ilp_path = "python3 SpecPart/ilp_k_solver.py " 
 triton_part_refiner_path = "/home/bodhi91/TritonPart_OpenROAD/build/src/openroad "

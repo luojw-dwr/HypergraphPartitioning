@@ -1,4 +1,4 @@
-using GraphLaplacians
+using GraphSignals
 using LinearMaps
 using IterativeSolvers
 
@@ -49,7 +49,7 @@ function solve_eigs(hgraph::__hypergraph__,
                     bmap = nothing;
                     epsilon::Int = 1)
     d = ones(hgraph.num_vertices) ./ 1e06
-    degs = GraphLaplacians.degree_matrix(adj)
+    degs = GraphSignals.degree_matrix(adj)
     lap_matrix = spdiagm(d) + degs - adj
     multiplier = ones(size(hgraph.vwts, 2))
     afunc = make_a_func(hgraph, epsilon)
@@ -80,7 +80,7 @@ function solve_eigs(hgraph::__hypergraph__,
     end
  
     #=projection_step!(evecs, 
-                    GraphLaplacians.degrees(adj), 
+                    GraphSignals.degrees(adj), 
                     bfunc)=#
     return evecs
 end
